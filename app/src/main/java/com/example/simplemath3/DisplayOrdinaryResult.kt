@@ -27,17 +27,11 @@ class DisplayOrdinaryResult : AppCompatActivity() {
             text = result.result
         }
 
-        // code for adapter
-        var childList = ArrayList<ArrayList<String>>()
-        var test = ArrayList<String>()
-        test.add("test1")
-        test.add("test")
-        test.add("test2")
-        childList.add(test)
-        var parents = arrayOf("parent")
+        val solveSteps = ArrayList<String>(result.solveSteps)
+        val explanationSteps = ArrayList<String>(result.explanationSteps)
 
         expList = exp_list
-        expandableAdapter = ExpandableAdapter(this, childList, parents)
+        expandableAdapter = ExpandableAdapter(this, solveSteps, explanationSteps)
         expList.setAdapter(expandableAdapter)
     }
 

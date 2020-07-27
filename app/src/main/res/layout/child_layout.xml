@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginLeft="20dp"
@@ -8,7 +10,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp">
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp">
 
         <LinearLayout
             android:orientation="vertical"
@@ -16,15 +19,23 @@
             android:layout_height="match_parent"
             android:gravity="center_horizontal">
 
-            <TextView
-                android:layout_width="match_parent"
+            <io.github.kexanie.library.MathView
+                android:id="@+id/child_txt"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="10sp"
-                android:text="child"
-                android:paddingLeft="10dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:id="@+id/child_txt" />
+                app:engine="KaTeX"
+                app:text=""
+                android:layout_marginTop="10dp"/>
+
+            <io.github.kexanie.library.MathView
+                android:id="@+id/child_latex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                app:engine="KaTeX"
+                app:text=""
+                android:layout_marginTop="10dp"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>

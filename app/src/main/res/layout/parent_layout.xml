@@ -4,9 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:divider="#ec2121"
-    android:dividerHeight="0.5dp">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

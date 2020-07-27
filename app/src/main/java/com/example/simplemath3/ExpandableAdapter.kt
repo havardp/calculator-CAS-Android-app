@@ -5,26 +5,30 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseExpandableListAdapter
-import android.widget.TextView
+import io.github.kexanie.library.MathView
 import java.util.*
 
 
-class ExpandableAdapter(var ctx: Context, var childList: ArrayList<ArrayList<String>>, var parents: Array<String>) : BaseExpandableListAdapter() {
+class ExpandableAdapter(private var ctx: Context, var solveSteps: ArrayList<String>, var explanationSteps: ArrayList<String>) : BaseExpandableListAdapter() {
 
     override fun getGroupCount(): Int {
-        return childList.size
+        return 1
     }
 
     override fun getChildrenCount(parent: Int): Int {
-        return childList[parent].size
+        return solveSteps.size
     }
 
     override fun getGroup(parent: Int): Any {
-        return parents[parent]
+        return false
     }
 
     override fun getChild(parent: Int, child: Int): Any {
-        return childList[parent][child]
+        return solveSteps[child]
+    }
+
+    private fun getSecondaryChild(parent: Int, child: Int): Any {
+        return explanationSteps[child]
     }
 
     override fun getGroupId(parent: Int): Long {
@@ -36,7 +40,7 @@ class ExpandableAdapter(var ctx: Context, var childList: ArrayList<ArrayList<Str
     }
 
     override fun hasStableIds(): Boolean {
-        return false
+        return true
     }
 
     override fun getGroupView(
@@ -67,18 +71,21 @@ class ExpandableAdapter(var ctx: Context, var childList: ArrayList<ArrayList<Str
                 ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             convertView = inflater.inflate(R.layout.child_layout, parentview, false)
         }
-        val child_textvew =
-            convertView?.findViewById<View>(R.id.child_txt) as TextView
-        child_textvew.text = getChild(parent, child).toString()
+
+        // set the hint to the current explanation step
+        val child_textview =
+            convertView?.findViewById<View>(R.id.child_txt) as MathView
+        child_textview.text = "\$\$\\small{${getSecondaryChild(parent, child)}}\$\$"
+
+        // set the solution to the current solve step
+        val child_latexview =
+            convertView.findViewById<View>(R.id.child_latex) as MathView
+        child_latexview.text = getChild(parent, child).toString()
+
         return convertView
     }
 
     override fun isChildSelectable(groupPosition: Int, childPosition: Int): Boolean {
         return false
-    }
-
-    init {
-        this.childList = childList
-        this.parents = parents
     }
 }
