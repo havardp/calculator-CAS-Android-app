@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.havardp.calculator.interpreter.Interpreter
 import com.havardp.calculator.interpreter.OrdinaryResult
 import com.havardp.calculator.interpreter.QuadraticResult
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity() {
 
     /** Change to the appropriate display result activity */
     private fun changeActivity(str: String){
+        if(str == "") return
         try{
             val result = getResult(str)
 

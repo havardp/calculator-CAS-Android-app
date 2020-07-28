@@ -27,7 +27,7 @@ class ExpandableAdapter(private var ctx: Context, var solveSteps: ArrayList<Stri
         return solveSteps[child]
     }
 
-    private fun getSecondaryChild(parent: Int, child: Int): Any {
+    private fun getSecondaryChild(child: Int): Any {
         return explanationSteps[child]
     }
 
@@ -75,12 +75,12 @@ class ExpandableAdapter(private var ctx: Context, var solveSteps: ArrayList<Stri
         // set the hint to the current explanation step
         val child_textview =
             convertView?.findViewById<View>(R.id.child_txt) as MathView
-        child_textview.text = "\$\$\\small{${getSecondaryChild(parent, child)}}\$\$"
+        child_textview.text = "\$\$ \\scriptsize{ ${getSecondaryChild(child)} } \$\$"
 
         // set the solution to the current solve step
         val child_latexview =
             convertView.findViewById<View>(R.id.child_latex) as MathView
-        child_latexview.text = getChild(parent, child).toString()
+        child_latexview.text = "\\( ${getChild(parent, child)} \\)"
 
         return convertView
     }

@@ -24,8 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:engine="KaTeX"
-                app:text=""
-                android:layout_marginTop="10dp"/>
+                app:text=""/>
 
             <io.github.kexanie.library.MathView
                 android:id="@+id/child_latex"
@@ -34,8 +33,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
                 app:engine="KaTeX"
-                app:text=""
-                android:layout_marginTop="10dp"/>
+                app:text=""/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>

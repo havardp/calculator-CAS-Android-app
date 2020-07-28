@@ -15,16 +15,16 @@ class DisplayOrdinaryResult : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_display_solve_equation)
 
-        // Get the Intent that started this activity and extract the string
+        // Get the Intent that started this activity and extract the result object we sent
         val result = intent.getSerializableExtra("result") as OrdinaryResult
-        // Capture the layout's TextView and set the string as its text
 
-        val inputView = inputLatex.apply {
-            text = result.input
+        // Capture the layout's TextView and set the string as its text
+        inputLatex.apply {
+            text = "\\(${result.input}\\)"
         }
 
-        val solutionView = solutionLatex.apply {
-            text = result.result
+        solutionLatex.apply {
+            text = "\\(${result.result}\\)"
         }
 
         val solveSteps = ArrayList<String>(result.solveSteps)
