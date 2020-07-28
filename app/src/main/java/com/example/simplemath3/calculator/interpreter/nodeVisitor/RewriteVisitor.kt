@@ -1919,7 +1919,7 @@ class RewriteVisitor: NodeVisitor() {
          */
         if (left !is OperandNode && right is OperandNode)
             return setExplanationAndReturnNode(
-                    "\\text{Move } ${prettyPrint(right)} \\text{ before } ${prettyPrint(left)}",
+                    "\\text{Move } ${prettyPrint(right)} \\text{ before } ${prettyPrint(left)}",
                     BinaryOperatorNode(token, right, left)
             )
 
@@ -1964,7 +1964,7 @@ class RewriteVisitor: NodeVisitor() {
         if((right !is UnaryOperatorNode || right.token is Minus && right.middle is UnaryOperatorNode)
                 && (left is UnaryOperatorNode && (left.token !is UnaryMinus || left.middle is UnaryOperatorNode)))
             return setExplanationAndReturnNode(
-                    "\\text{Move } ${prettyPrint(right)} \\text{ before } ${prettyPrint(left)}",
+                    "\\text{Move } ${prettyPrint(right)} \\text{before } ${prettyPrint(left)}",
                     BinaryOperatorNode(Multiplication(), right, left)
             )
 

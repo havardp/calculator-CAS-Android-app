@@ -13,7 +13,7 @@ class DisplaySyntaxError : AppCompatActivity() {
         val errorMessage = intent.getStringExtra("ERROR_MESSAGE")
 
         // Capture the layout's TextView and set the string as its text
-        val inputView = errorText.apply {
+        errorText.apply {
             text = errorMessage
         }
     }
