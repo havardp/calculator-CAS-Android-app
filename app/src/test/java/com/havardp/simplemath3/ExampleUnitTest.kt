@@ -1,4 +1,4 @@
-package com.example.simplemath3
+package com.havardp.simplemath3
 
 import org.junit.Test
 

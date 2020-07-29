@@ -1,4 +1,4 @@
-package com.example.simplemath3
+package com.havardp.simplemath3
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +12,7 @@ import com.havardp.calculator.interpreter.Result
 import com.havardp.calculator.lexer.Lexer
 import com.havardp.calculator.parser.Parser
 import com.havardp.exception.InvalidSyntaxException
+import com.havardp.simplemath3.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

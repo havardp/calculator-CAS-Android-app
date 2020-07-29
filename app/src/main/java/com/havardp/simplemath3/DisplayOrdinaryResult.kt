@@ -1,9 +1,10 @@
-package com.example.simplemath3
+package com.havardp.simplemath3
 
 import android.os.Bundle
 import android.widget.ExpandableListView
 import androidx.appcompat.app.AppCompatActivity
 import com.havardp.calculator.interpreter.OrdinaryResult
+import com.havardp.simplemath3.R
 import kotlinx.android.synthetic.main.activity_display_solve_equation.*
 
 

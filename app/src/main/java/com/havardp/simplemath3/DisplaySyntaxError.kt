@@ -1,7 +1,8 @@
-package com.example.simplemath3
+package com.havardp.simplemath3
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.havardp.simplemath3.R
 import kotlinx.android.synthetic.main.activity_display_syntax_error.*
 
 class DisplaySyntaxError : AppCompatActivity() {

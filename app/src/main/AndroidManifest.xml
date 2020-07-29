@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.simplemath3">
+    package="com.havardp.simplemath3">
 
     <application
         android:allowBackup="true"
@@ -10,33 +10,33 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".DisplaySyntaxError"
-            android:parentActivityName=".MainActivity">
+            android:name="com.havardp.simplemath3.DisplaySyntaxError"
+            android:parentActivityName="com.havardp.simplemath3.MainActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.havardp.simplemath3.MainActivity" />
         </activity>
         <activity
-            android:name=".DisplayQuadraticResult"
-            android:parentActivityName=".MainActivity">
+            android:name="com.havardp.simplemath3.DisplayQuadraticResult"
+            android:parentActivityName="com.havardp.simplemath3.MainActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.havardp.simplemath3.MainActivity" />
         </activity>
         <activity
-            android:name=".DisplayOrdinaryResult"
-            android:parentActivityName=".MainActivity">
+            android:name="com.havardp.simplemath3.DisplayOrdinaryResult"
+            android:parentActivityName="com.havardp.simplemath3.MainActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.havardp.simplemath3.MainActivity" />
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name="com.havardp.simplemath3.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

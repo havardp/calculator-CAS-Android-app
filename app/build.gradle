@@ -7,7 +7,7 @@ android {
     buildToolsVersion "30.0.1"
 
     defaultConfig {
-        applicationId "com.example.simplemath3"
+        applicationId "com.havardp.simplemath3"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1

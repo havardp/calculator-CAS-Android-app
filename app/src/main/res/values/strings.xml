@@ -4,8 +4,8 @@
     <string name="examplelatex1">$$ sin(\\frac{pi}{2}) $$</string>
     <string name="exampletag2">x^2+x+1=0</string>
     <string name="examplelatex2">$$ x^2 + x + 1 = 0 $$</string>
-    <string name="exampletag3">2+(2+i)-2sin(x)+3 x 3  x/x-x</string>
-    <string name="examplelatex3">$$ 2+(2+i)-2 \\cdot sin(x)+\\frac{3\\cdot x \\cdot3 \\cdot x}{x}-x $$</string>
+    <string name="exampletag3">2-(x-2)+2sin(x)+3 x 3  x/x-x</string>
+    <string name="examplelatex3">$$ 2-(x-2) + sin(x)+\\frac{3\\cdot x \\cdot3 \\cdot x}{x}-x $$</string>
     <string name="exampletag4">x^5-3=29</string>
     <string name="examplelatex4">$$ x^5-3=29 $$</string>
     <string name="exampletag5">2x-3=5</string>

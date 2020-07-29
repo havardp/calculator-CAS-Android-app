@@ -1,4 +1,4 @@
-package com.example.simplemath3
+package com.havardp.simplemath3
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

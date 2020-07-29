@@ -1,13 +1,12 @@
-package com.example.simplemath3
+package com.havardp.simplemath3
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ExpandableListView
-import com.havardp.calculator.interpreter.OrdinaryResult
 import com.havardp.calculator.interpreter.QuadraticResult
+import com.havardp.simplemath3.R
 import kotlinx.android.synthetic.main.activity_display_quadratic_result.*
-import kotlinx.android.synthetic.main.activity_display_solve_equation.*
 import kotlinx.android.synthetic.main.activity_display_solve_equation.inputLatex
 import kotlinx.android.synthetic.main.activity_display_solve_equation.solutionLatex
 import java.util.*
